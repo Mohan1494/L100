@@ -1,2 +1,4 @@
 "Hello Git" 
 Hello I am Mohan
+"A new line is added" 
+"A new line at the 4th position is added" 

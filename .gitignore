@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# TypeScript build output
+dist/
+build/
+out/
+
+# Compiled JS
+*.js
+*.js.map
+*.d.ts

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",                    // Use ECMAScript modules
+    "moduleResolution": "Node",            // Resolve modules as Node.js does
+    "target": "ESNext",                    // Use modern JavaScript features
+    "strict": true,                        // Enable strict type-checking
+    "esModuleInterop": true,               // Allow compatibility with CommonJS and ES modules
+    "skipLibCheck": true,                  // Skip checking library files (to speed up compilation)
+    "forceConsistentCasingInFileNames": true,  // Ensure file names are consistent
+    "isolatedModules": true,               // Allow isolated file compilation (helpful for faster builds)
+    "resolveJsonModule": true,             // Allow importing JSON files
+    "noImplicitAny": true,                 // Ensure no `any` types are implicitly used
+    "lib": ["ESNext", "DOM"]               // Include DOM typings for browser-specific code
+  }
+}

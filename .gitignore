@@ -10,3 +10,4 @@ out/
 *.js
 *.js.map
 *.d.ts
+*.class

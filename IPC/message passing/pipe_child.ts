@@ -1,12 +1,10 @@
-// Listen for messages from parent via stdin
+
 process.stdin.on("data", (data) => {
   console.log("Child received:", data.toString().trim());
 
-  // Send response back to parent
   process.stdout.write("Hello Parent, message received by Child\n");
 });
 
-// Notify parent that child is ready
 process.stdout.write("Child is ready to communicate\n");
 
 /*

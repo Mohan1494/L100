@@ -1,22 +1,17 @@
 import { Worker } from "worker_threads";
 
-// Create a shared memory block of 4 bytes (enough for one 32-bit integer)
 const sharedBuffer = new SharedArrayBuffer(4);
 
-// Create a typed view to read/write the shared memory
 const sharedArray = new Int32Array(sharedBuffer);
 
-// Initialize the shared value
 sharedArray[0] = 10;
 
 console.log("Main: Initial value =", sharedArray[0]);
 
-// Create a worker thread and pass the shared memory reference
 const worker = new Worker("./worker.js", {
   workerData: sharedBuffer
 });
 
-// This runs after the worker thread has finished execution
 worker.on("exit", () => {
   console.log("Main: Final value =", sharedArray[0]);
 });

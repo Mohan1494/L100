@@ -7,11 +7,9 @@ const child = spawn("node", ["child_pipe.js"]);
 child.stdout.on("data", (data) => {
   console.log("Parent received:", data.toString().trim());
 
-  // Reply back to child
   child.stdin.write("Hello Child, message received by Parent\n");
 });
 
-// Send initial message to child
 child.stdin.write("Hello from Parent\n");
 
 // Handle child exit

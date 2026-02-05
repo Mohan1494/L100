@@ -1,19 +1,16 @@
 import * as net from "net";
 import * as readline from "readline";
 
-// Read username from command-line arguments
 const name = process.argv[2];
 if (!name) {
   console.log("Usage: node client.js <your-name>");
   process.exit(1);
 }
 
-// Connect to the chat server
 const socket = net.connect(4000, "localhost", () => {
-  socket.write(name + "\n"); // Send username to server
+  socket.write(name + "\n"); 
 });
 
-// Setup input reading from terminal
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout

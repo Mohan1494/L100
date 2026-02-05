@@ -1,9 +1,7 @@
 import { workerData } from "worker_threads";
 
-// Create a typed view over the shared memory received from main thread
 const sharedArray = new Int32Array(workerData);
 
-// Atomically increment the shared value 5 times
 for (let i = 0; i < 5; i++) {
   Atomics.add(sharedArray, 0, 1);
 }
